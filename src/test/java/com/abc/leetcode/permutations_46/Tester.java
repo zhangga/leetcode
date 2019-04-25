@@ -1,7 +1,7 @@
 /**
- * Leetcode - add_two_numbers
+ * Leetcode - permutations_46
  */
-package com.abc.leetcode.add_two_numbers;
+package com.abc.leetcode.permutations_46;
 
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
@@ -45,8 +45,16 @@ public class Tester {
     /** Initialize test cases */
     @Parameters
     public static Collection<Object[]> testcases() {
+        int[] nums1 = new int[]{1,2,3};
+        List<List<Integer>> output1 = new ArrayList<>();
+        output1.add(Arrays.asList(1,2,3));
+        output1.add(Arrays.asList(1,3,2));
+        output1.add(Arrays.asList(2,1,3));
+        output1.add(Arrays.asList(2,3,1));
+        output1.add(Arrays.asList(3,2,1));
+        output1.add(Arrays.asList(3,1,2));
         return Arrays.asList(new Object[][]{
-            // {},     // test case 1 (init parameters below: {para1, para2, expected})
+             {nums1, output1},     // test case 1 (init parameters below: {para1, para2, expected})
             // {},     // test case 2 (init parameters below: {para1, para2, expected})
             // {}      // test case 3 (init parameters below: {para1, para2, expected})
         });
@@ -58,16 +66,14 @@ public class Tester {
      * Parameters for each test (initialized in testcases() method) 
      * You can change the type of parameters
      */
-    // private Object para1;                       // parameter 1
-    // private Object para2;                       // parameter 2
-    // private Object expected;                    // parameter 3 (expected answer)
+     private int[] nums;                       // parameter 1
+     private List<List<Integer>> expected;                    // parameter 3 (expected answer)
 
     /** This constructor must be provided to run parameterized test. */
-    public Tester(Object para1, Object para2, Object expected) {
+    public Tester(int[] nums, List<List<Integer>> expected) {
            // initialize test parameters
-    //     this.para1 = para1; 
-    //     this.para2 = para2;
-    //     this.expected = expected;
+         this.nums = nums;
+         this.expected = expected;
     }
 
     /** Execute before each test method in this class is executed. */
@@ -77,14 +83,13 @@ public class Tester {
     /** Executed as a test case. */
     @Test
     public void test() {
-        //
-        // Object actual = solution.your-method(para1, para2);
-        //
-        // assertThat(actual, is(equalTo(expected)));
-        //
-        // if (LOGGER.isDebugEnabled()) {
-        //     LOGGER.debug("your-method() pass unit test!");
-        // }
+         Object actual = solution.permute(nums);
+
+         assertThat(actual, is(equalTo(expected)));
+
+         if (LOGGER.isDebugEnabled()) {
+             LOGGER.debug("permute() pass unit test!");
+         }
     }
 
     /** Execute after each test method in this class is executed. */

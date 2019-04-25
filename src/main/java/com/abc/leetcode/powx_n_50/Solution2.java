@@ -1,7 +1,7 @@
 /**
- * Leetcode - add_two_numbers
+ * Leetcode - powx_n_50
  */
-package com.abc.leetcode.add_two_numbers;
+package com.abc.leetcode.powx_n_50;
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
@@ -16,6 +16,9 @@ import com.ciaoshen.leetcode.util.*;
  */
 class Solution2 implements Solution {
 
-    
+    @Override
+    public double myPow(double x, int n) {
+        return 0;
+    }
 
 }

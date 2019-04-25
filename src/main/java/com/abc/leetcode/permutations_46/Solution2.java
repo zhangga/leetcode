@@ -1,7 +1,7 @@
 /**
- * Leetcode - two_sum
+ * Leetcode - permutations_46
  */
-package com.abc.leetcode.two_sum;
+package com.abc.leetcode.permutations_46;
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
@@ -14,8 +14,11 @@ import com.ciaoshen.leetcode.util.*;
  *     }
  * =============================================
  */
-class Solution1 implements Solution {
+class Solution2 implements Solution {
 
-    
+    @Override
+    public List<List<Integer>> permute(int[] nums) {
+        return null;
+    }
 
 }

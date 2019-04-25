@@ -1,7 +1,7 @@
 /**
- * Leetcode - two_sum
+ * Leetcode - powx_n_50
  */
-package com.abc.leetcode.two_sum;
+package com.abc.leetcode.powx_n_50;
 
 // basic util
 import java.util.*;

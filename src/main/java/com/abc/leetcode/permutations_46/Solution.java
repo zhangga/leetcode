@@ -1,7 +1,7 @@
 /**
- * Leetcode - two_sum
+ * Leetcode - permutations_46
  */
-package com.abc.leetcode.two_sum;
+package com.abc.leetcode.permutations_46;
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
@@ -12,5 +12,7 @@ interface Solution {
 
     // use this Object to print the log (call from slf4j facade)
     static Logger log = LoggerFactory.getLogger(Solution.class);
+
+    public List<List<Integer>> permute(int[] nums);
     
 }

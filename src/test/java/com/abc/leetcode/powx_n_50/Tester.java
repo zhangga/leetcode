@@ -1,7 +1,7 @@
 /**
- * Leetcode - two_sum
+ * Leetcode - powx_n_50
  */
-package com.abc.leetcode.two_sum;
+package com.abc.leetcode.powx_n_50;
 
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
@@ -46,9 +46,9 @@ public class Tester {
     @Parameters
     public static Collection<Object[]> testcases() {
         return Arrays.asList(new Object[][]{
-            // {},     // test case 1 (init parameters below: {para1, para2, expected})
-            // {},     // test case 2 (init parameters below: {para1, para2, expected})
-            // {}      // test case 3 (init parameters below: {para1, para2, expected})
+                {2.0, 10, 1024.0},     // test case 1 (init parameters below: {para1, para2, expected})
+                {2.1, 3, 9.261},     // test case 2 (init parameters below: {para1, para2, expected})
+                {2.0, -2, 0.25}      // test case 3 (init parameters below: {para1, para2, expected})
         });
     }
 
@@ -58,16 +58,16 @@ public class Tester {
      * Parameters for each test (initialized in testcases() method) 
      * You can change the type of parameters
      */
-    // private Object para1;                       // parameter 1
-    // private Object para2;                       // parameter 2
-    // private Object expected;                    // parameter 3 (expected answer)
+    private double x;                       // parameter 1
+    private int n;                       // parameter 2
+    private double expected;                    // parameter 3 (expected answer)
 
     /** This constructor must be provided to run parameterized test. */
-    public Tester(Object para1, Object para2, Object expected) {
+    public Tester(double x, int n, double expected) {
            // initialize test parameters
-    //     this.para1 = para1; 
-    //     this.para2 = para2;
-    //     this.expected = expected;
+        this.x = x;
+        this.n = n;
+        this.expected = expected;
     }
 
     /** Execute before each test method in this class is executed. */
@@ -77,14 +77,13 @@ public class Tester {
     /** Executed as a test case. */
     @Test
     public void test() {
-        //
-        // Object actual = solution.your-method(para1, para2);
-        //
-        // assertThat(actual, is(equalTo(expected)));
-        //
-        // if (LOGGER.isDebugEnabled()) {
-        //     LOGGER.debug("your-method() pass unit test!");
-        // }
+        Object actual = solution.myPow(x, n);
+
+        assertThat(actual, is(equalTo(expected)));
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("myPow() pass unit test!");
+        }
     }
 
     /** Execute after each test method in this class is executed. */

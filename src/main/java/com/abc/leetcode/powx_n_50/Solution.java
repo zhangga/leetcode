@@ -1,7 +1,7 @@
 /**
- * Leetcode - add_two_numbers
+ * Leetcode - powx_n_50
  */
-package com.abc.leetcode.add_two_numbers;
+package com.abc.leetcode.powx_n_50;
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
@@ -12,5 +12,7 @@ interface Solution {
 
     // use this Object to print the log (call from slf4j facade)
     static Logger log = LoggerFactory.getLogger(Solution.class);
+
+    public double myPow(double x, int n);
     
 }
