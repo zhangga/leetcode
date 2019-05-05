@@ -1,7 +1,7 @@
 /**
- * Leetcode - powx_n_50
+ * Leetcode - p0046_permutations
  */
-package com.abc.leetcode.powx_n_50;
+package com.abc.leetcode.p0046_permutations;
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
@@ -14,11 +14,11 @@ import com.ciaoshen.leetcode.util.*;
  *     }
  * =============================================
  */
-class Solution1 implements Solution {
+class Solution2 implements Solution {
 
     @Override
-    public double myPow(double x, int n) {
-        return 0;
+    public List<List<Integer>> permute(int[] nums) {
+        return null;
     }
 
 }

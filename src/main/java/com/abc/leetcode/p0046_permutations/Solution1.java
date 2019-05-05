@@ -1,7 +1,7 @@
 /**
- * Leetcode - permutations_46
+ * Leetcode - p0046_permutations
  */
-package com.abc.leetcode.permutations_46;
+package com.abc.leetcode.p0046_permutations;
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 

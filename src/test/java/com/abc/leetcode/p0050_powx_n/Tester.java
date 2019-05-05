@@ -1,7 +1,7 @@
 /**
- * Leetcode - permutations_46
+ * Leetcode - p0050_powx_n
  */
-package com.abc.leetcode.permutations_46;
+package com.abc.leetcode.p0050_powx_n;
 
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
@@ -45,35 +45,29 @@ public class Tester {
     /** Initialize test cases */
     @Parameters
     public static Collection<Object[]> testcases() {
-        int[] nums1 = new int[]{1,2,3};
-        List<List<Integer>> output1 = new ArrayList<>();
-        output1.add(Arrays.asList(1,2,3));
-        output1.add(Arrays.asList(1,3,2));
-        output1.add(Arrays.asList(2,1,3));
-        output1.add(Arrays.asList(2,3,1));
-        output1.add(Arrays.asList(3,2,1));
-        output1.add(Arrays.asList(3,1,2));
         return Arrays.asList(new Object[][]{
-             {nums1, output1},     // test case 1 (init parameters below: {para1, para2, expected})
-            // {},     // test case 2 (init parameters below: {para1, para2, expected})
-            // {}      // test case 3 (init parameters below: {para1, para2, expected})
+                {2.0, 10, 1024.0},     // test case 1 (init parameters below: {para1, para2, expected})
+                {2.1, 3, 9.261000000000001},     // test case 2 (init parameters below: {para1, para2, expected})
+                {2.0, -2, 0.25}      // test case 3 (init parameters below: {para1, para2, expected})
         });
     }
 
     /**=========================== for each test case ============================== */
 
-    /** 
-     * Parameters for each test (initialized in testcases() method) 
+    /**
+     * Parameters for each test (initialized in testcases() method)
      * You can change the type of parameters
      */
-     private int[] nums;                       // parameter 1
-     private List<List<Integer>> expected;                    // parameter 3 (expected answer)
+    private double x;                       // parameter 1
+    private int n;                       // parameter 2
+    private double expected;                    // parameter 3 (expected answer)
 
     /** This constructor must be provided to run parameterized test. */
-    public Tester(int[] nums, List<List<Integer>> expected) {
-           // initialize test parameters
-         this.nums = nums;
-         this.expected = expected;
+    public Tester(double x, int n, double expected) {
+        // initialize test parameters
+        this.x = x;
+        this.n = n;
+        this.expected = expected;
     }
 
     /** Execute before each test method in this class is executed. */
@@ -83,13 +77,13 @@ public class Tester {
     /** Executed as a test case. */
     @Test
     public void test() {
-         Object actual = solution.permute(nums);
+        Object actual = solution.myPow(x, n);
 
-         assertThat(actual, is(equalTo(expected)));
+        assertThat(actual, is(equalTo(expected)));
 
-         if (LOGGER.isDebugEnabled()) {
-             LOGGER.debug("permute() pass unit test!");
-         }
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("myPow() pass unit test!");
+        }
     }
 
     /** Execute after each test method in this class is executed. */

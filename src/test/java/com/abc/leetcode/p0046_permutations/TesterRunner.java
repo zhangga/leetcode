@@ -1,7 +1,7 @@
 /**
- * Leetcode - powx_n_50
+ * Leetcode - p0046_permutations
  */
-package com.abc.leetcode.powx_n_50;
+package com.abc.leetcode.p0046_permutations;
 
 // basic util
 import java.util.*;

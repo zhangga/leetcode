@@ -1,7 +1,7 @@
 /**
- * Leetcode - permutations_46
+ * Leetcode - p0001_two_sum
  */
-package com.abc.leetcode.permutations_46;
+package com.abc.leetcode.p0001_two_sum;
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
@@ -17,8 +17,8 @@ import com.ciaoshen.leetcode.util.*;
 class Solution2 implements Solution {
 
     @Override
-    public List<List<Integer>> permute(int[] nums) {
-        return null;
+    public int[] twoSum(int[] nums, int target) {
+        return new int[0];
     }
 
 }

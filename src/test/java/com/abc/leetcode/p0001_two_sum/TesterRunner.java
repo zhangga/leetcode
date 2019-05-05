@@ -1,7 +1,7 @@
 /**
- * Leetcode - permutations_46
+ * Leetcode - p0001_two_sum
  */
-package com.abc.leetcode.permutations_46;
+package com.abc.leetcode.p0001_two_sum;
 
 // basic util
 import java.util.*;

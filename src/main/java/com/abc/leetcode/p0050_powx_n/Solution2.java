@@ -1,7 +1,7 @@
 /**
- * Leetcode - powx_n_50
+ * Leetcode - p0050_powx_n
  */
-package com.abc.leetcode.powx_n_50;
+package com.abc.leetcode.p0050_powx_n;
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
