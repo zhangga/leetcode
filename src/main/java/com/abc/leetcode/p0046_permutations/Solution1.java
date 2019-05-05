@@ -6,13 +6,7 @@ import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
 /** 
- * log instance is defined in Solution interface
- * this is how slf4j will work in this class:
- * =============================================
- *     if (log.isDebugEnabled()) {
- *         log.debug("a + b = {}", sum);
- *     }
- * =============================================
+ * 全排列。同时思考全组合怎么实现。
  */
 class Solution1 implements Solution {
 
