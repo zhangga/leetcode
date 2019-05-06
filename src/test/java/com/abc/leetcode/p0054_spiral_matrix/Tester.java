@@ -1,7 +1,7 @@
 /**
- * Leetcode - p0142_linked_list_cycle
+ * Leetcode - p0054_spiral_matrix
  */
-package com.abc.leetcode.p0142_linked_list_cycle;
+package com.abc.leetcode.p0054_spiral_matrix;
 
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
@@ -45,25 +45,15 @@ public class Tester {
     /** Initialize test cases */
     @Parameters
     public static Collection<Object[]> testcases() {
-        ListNode head1_1 = new ListNode(3);
-        ListNode head1_2 = new ListNode(2);
-        head1_1.next = head1_2;
-        ListNode head1_3 = new ListNode(0);
-        head1_2.next = head1_3;
-        ListNode head1_4 = new ListNode(-4);
-        head1_3.next = head1_4;
-        head1_4.next = head1_2;
-
-        ListNode head2_1 = new ListNode(1);
-        ListNode head2_2 = new ListNode(2);
-        head2_1.next = head2_2;
-        head2_2.next = head2_1;
-
-        ListNode head3_1 = new ListNode(1);
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}};
+        List<Integer> expected = Arrays.asList(1,2,3,6,9,8,7,4,5);
         return Arrays.asList(new Object[][]{
-                {head1_1, head1_2},     // test case 1 (init parameters below: {para1, para2, expected})
-                {head2_1, head2_1},     // test case 2 (init parameters below: {para1, para2, expected})
-                {head3_1, null}      // test case 3 (init parameters below: {para1, para2, expected})
+             {matrix, expected},     // test case 1 (init parameters below: {para1, para2, expected})
+            // {},     // test case 2 (init parameters below: {para1, para2, expected})
+            // {}      // test case 3 (init parameters below: {para1, para2, expected})
         });
     }
 
@@ -73,12 +63,12 @@ public class Tester {
      * Parameters for each test (initialized in testcases() method) 
      * You can change the type of parameters
      */
-     private ListNode para1;                       // parameter 1
+     private int[][] para1;                       // parameter 1
     // private Object para2;                       // parameter 2
-     private ListNode expected;                    // parameter 3 (expected answer)
+     private List<Integer> expected;                    // parameter 3 (expected answer)
 
     /** This constructor must be provided to run parameterized test. */
-    public Tester(ListNode para1, ListNode expected) {
+    public Tester(int[][] para1, List<Integer> expected) {
            // initialize test parameters
          this.para1 = para1;
     //     this.para2 = para2;
@@ -93,7 +83,7 @@ public class Tester {
     @Test
     public void test() {
 
-         Object actual = solution.detectCycle(para1);
+         Object actual = solution.spiralOrder(para1);
 
          assertThat(actual, is(equalTo(expected)));
 

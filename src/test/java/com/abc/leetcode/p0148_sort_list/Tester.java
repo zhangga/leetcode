@@ -1,7 +1,7 @@
 /**
- * Leetcode - p0142_linked_list_cycle
+ * Leetcode - p0148_sort_list
  */
-package com.abc.leetcode.p0142_linked_list_cycle;
+package com.abc.leetcode.p0148_sort_list;
 
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
@@ -45,25 +45,45 @@ public class Tester {
     /** Initialize test cases */
     @Parameters
     public static Collection<Object[]> testcases() {
-        ListNode head1_1 = new ListNode(3);
+        ListNode head1_1 = new ListNode(4);
         ListNode head1_2 = new ListNode(2);
+        ListNode head1_3 = new ListNode(1);
+        ListNode head1_4 = new ListNode(3);
         head1_1.next = head1_2;
-        ListNode head1_3 = new ListNode(0);
         head1_2.next = head1_3;
-        ListNode head1_4 = new ListNode(-4);
         head1_3.next = head1_4;
-        head1_4.next = head1_2;
 
-        ListNode head2_1 = new ListNode(1);
-        ListNode head2_2 = new ListNode(2);
+        ListNode expected1_1 = new ListNode(1);
+        ListNode expected1_2 = new ListNode(2);
+        ListNode expected1_3 = new ListNode(3);
+        ListNode expected1_4 = new ListNode(4);
+        expected1_1.next = expected1_2;
+        expected1_2.next = expected1_3;
+        expected1_3.next = expected1_4;
+
+        ListNode head2_1 = new ListNode(-1);
+        ListNode head2_2 = new ListNode(5);
+        ListNode head2_3 = new ListNode(3);
+        ListNode head2_4 = new ListNode(4);
+        ListNode head2_5 = new ListNode(0);
         head2_1.next = head2_2;
-        head2_2.next = head2_1;
+        head2_2.next = head2_3;
+        head2_3.next = head2_4;
+        head2_4.next = head2_5;
 
-        ListNode head3_1 = new ListNode(1);
+        ListNode expected2_1 = new ListNode(-1);
+        ListNode expected2_2 = new ListNode(0);
+        ListNode expected2_3 = new ListNode(3);
+        ListNode expected2_4 = new ListNode(4);
+        ListNode expected2_5 = new ListNode(5);
+        expected2_1.next = expected2_2;
+        expected2_2.next = expected2_3;
+        expected2_3.next = expected2_4;
+        expected2_4.next = expected2_5;
         return Arrays.asList(new Object[][]{
-                {head1_1, head1_2},     // test case 1 (init parameters below: {para1, para2, expected})
-                {head2_1, head2_1},     // test case 2 (init parameters below: {para1, para2, expected})
-                {head3_1, null}      // test case 3 (init parameters below: {para1, para2, expected})
+             {head1_1, expected1_1},     // test case 1 (init parameters below: {para1, para2, expected})
+             {head2_1, expected2_1},     // test case 2 (init parameters below: {para1, para2, expected})
+            // {}      // test case 3 (init parameters below: {para1, para2, expected})
         });
     }
 
@@ -93,7 +113,7 @@ public class Tester {
     @Test
     public void test() {
 
-         Object actual = solution.detectCycle(para1);
+         Object actual = solution.sortList(para1);
 
          assertThat(actual, is(equalTo(expected)));
 

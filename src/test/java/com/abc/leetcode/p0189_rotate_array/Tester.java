@@ -1,7 +1,7 @@
 /**
- * Leetcode - p0142_linked_list_cycle
+ * Leetcode - p0189_rotate_array
  */
-package com.abc.leetcode.p0142_linked_list_cycle;
+package com.abc.leetcode.p0189_rotate_array;
 
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
@@ -45,25 +45,10 @@ public class Tester {
     /** Initialize test cases */
     @Parameters
     public static Collection<Object[]> testcases() {
-        ListNode head1_1 = new ListNode(3);
-        ListNode head1_2 = new ListNode(2);
-        head1_1.next = head1_2;
-        ListNode head1_3 = new ListNode(0);
-        head1_2.next = head1_3;
-        ListNode head1_4 = new ListNode(-4);
-        head1_3.next = head1_4;
-        head1_4.next = head1_2;
-
-        ListNode head2_1 = new ListNode(1);
-        ListNode head2_2 = new ListNode(2);
-        head2_1.next = head2_2;
-        head2_2.next = head2_1;
-
-        ListNode head3_1 = new ListNode(1);
         return Arrays.asList(new Object[][]{
-                {head1_1, head1_2},     // test case 1 (init parameters below: {para1, para2, expected})
-                {head2_1, head2_1},     // test case 2 (init parameters below: {para1, para2, expected})
-                {head3_1, null}      // test case 3 (init parameters below: {para1, para2, expected})
+            // {},     // test case 1 (init parameters below: {para1, para2, expected})
+            // {},     // test case 2 (init parameters below: {para1, para2, expected})
+            // {}      // test case 3 (init parameters below: {para1, para2, expected})
         });
     }
 
@@ -73,16 +58,16 @@ public class Tester {
      * Parameters for each test (initialized in testcases() method) 
      * You can change the type of parameters
      */
-     private ListNode para1;                       // parameter 1
+    // private Object para1;                       // parameter 1
     // private Object para2;                       // parameter 2
-     private ListNode expected;                    // parameter 3 (expected answer)
+    // private Object expected;                    // parameter 3 (expected answer)
 
     /** This constructor must be provided to run parameterized test. */
-    public Tester(ListNode para1, ListNode expected) {
+    public Tester(Object para1, Object para2, Object expected) {
            // initialize test parameters
-         this.para1 = para1;
+    //     this.para1 = para1; 
     //     this.para2 = para2;
-         this.expected = expected;
+    //     this.expected = expected;
     }
 
     /** Execute before each test method in this class is executed. */
@@ -92,14 +77,14 @@ public class Tester {
     /** Executed as a test case. */
     @Test
     public void test() {
-
-         Object actual = solution.detectCycle(para1);
-
-         assertThat(actual, is(equalTo(expected)));
-
-         if (LOGGER.isDebugEnabled()) {
-             LOGGER.debug("your-method() pass unit test!");
-         }
+        //
+        // Object actual = solution.your-method(para1, para2);
+        //
+        // assertThat(actual, is(equalTo(expected)));
+        //
+        // if (LOGGER.isDebugEnabled()) {
+        //     LOGGER.debug("your-method() pass unit test!");
+        // }
     }
 
     /** Execute after each test method in this class is executed. */
