@@ -26,7 +26,6 @@ public class Tester {
     /**=========================== static for every test cases ============================== */
 
     // Solution instance to test
-    private static Solution solution;
     // use this Object to print the log (call from slf4j facade)
     private static final Logger LOGGER = LoggerFactory.getLogger(TesterRunner.class);
 
@@ -34,7 +33,6 @@ public class Tester {
     @BeforeClass
     public static void setUpBeforeClass() throws Exception {
         /* uncomment to switch solutions */
-        solution = new Solution1(null);
         // solution = new Solution2();
     }
 

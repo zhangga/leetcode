@@ -14,9 +14,8 @@ import com.ciaoshen.leetcode.util.*;
  *     }
  * =============================================
  */
-class Solution1 implements Solution {
+class Solution1 {
 
-    @Override
     public int[] moveZeroes(int[] nums) {
         int index = 0;
         for (int i = 0; i < nums.length; i++) {

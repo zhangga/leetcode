@@ -6,9 +6,8 @@ package com.abc.leetcode.p0138_copy_list_with_random_pointer;
 /** 
  * 深拷贝带随机节点的链表
  */
-class Solution1 implements Solution {
+class Solution1 {
 
-    @Override
     public Node copyRandomList(Node head) {
         if (head == null)
             return null;

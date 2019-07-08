@@ -1,7 +1,7 @@
 /**
- * Leetcode - p0019_remove_nth_node
+ * Leetcode - p0171_excel_sheet_column_number
  */
-package com.abc.leetcode.p0019_remove_nth_node;
+package com.abc.leetcode.p0171_excel_sheet_column_number;
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
@@ -13,6 +13,6 @@ interface Solution {
     // use this Object to print the log (call from slf4j facade)
     static Logger log = LoggerFactory.getLogger(Solution.class);
 
-    public ListNode removeNthFromEnd(ListNode head, int n);
+    public int titleToNumber(String s);
     
 }

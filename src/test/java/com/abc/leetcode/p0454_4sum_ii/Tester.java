@@ -1,7 +1,7 @@
 /**
- * Leetcode - p0019_remove_nth_node
+ * Leetcode - p0454_4sum_ii
  */
-package com.abc.leetcode.p0019_remove_nth_node;
+package com.abc.leetcode.p0454_4sum_ii;
 
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
@@ -25,7 +25,8 @@ public class Tester {
 
     /**=========================== static for every test cases ============================== */
 
-    private static Solution1 solution;
+    // Solution instance to test
+    private static Solution solution;
     // use this Object to print the log (call from slf4j facade)
     private static final Logger LOGGER = LoggerFactory.getLogger(TesterRunner.class);
 
@@ -34,6 +35,7 @@ public class Tester {
     public static void setUpBeforeClass() throws Exception {
         /* uncomment to switch solutions */
         solution = new Solution1();
+        // solution = new Solution2();
     }
 
     /** Execute once after all of the test methods are executed in this class. */
@@ -43,24 +45,12 @@ public class Tester {
     /** Initialize test cases */
     @Parameters
     public static Collection<Object[]> testcases() {
-        ListNode head = new ListNode(1);
-        ListNode node_2 = new ListNode(2);
-        ListNode node_3 = new ListNode(3);
-        ListNode node_4 = new ListNode(4);
-        ListNode node_5 = new ListNode(5);
-        head.next = node_2;
-        node_2.next = node_3;
-        node_3.next = node_4;
-        node_4.next = node_5;
-        ListNode expected = new ListNode(1);
-        ListNode ex_2 = new ListNode(2);
-        ListNode ex_3 = new ListNode(3);
-        ListNode ex_4 = new ListNode(5);
-        expected.next = ex_2;
-        ex_2.next = ex_3;
-        ex_3.next = ex_4;
+        int[] A = {1, 2};
+        int[] B = {-2, -1};
+        int[] C = {-1, 2};
+        int[] D = {0, 2};
         return Arrays.asList(new Object[][]{
-             {head, 2, expected},     // test case 1 (init parameters below: {para1, para2, expected})
+             {A, B, C, D, 2},     // test case 1 (init parameters below: {para1, para2, expected})
             // {},     // test case 2 (init parameters below: {para1, para2, expected})
             // {}      // test case 3 (init parameters below: {para1, para2, expected})
         });
@@ -72,15 +62,19 @@ public class Tester {
      * Parameters for each test (initialized in testcases() method) 
      * You can change the type of parameters
      */
-     private ListNode para1;                       // parameter 1
-     private int para2;                       // parameter 2
-     private ListNode expected;                    // parameter 3 (expected answer)
+     private int[] para1;                       // parameter 1
+     private int[] para2;                       // parameter 2
+     private int[] para3;                       // parameter 3
+     private int[] para4;                       // parameter 4
+     private int expected;                    // parameter 3 (expected answer)
 
     /** This constructor must be provided to run parameterized test. */
-    public Tester(ListNode para1, int para2, ListNode expected) {
+    public Tester(int[] para1, int[] para2, int[] para3, int[] para4, int expected) {
            // initialize test parameters
          this.para1 = para1;
          this.para2 = para2;
+         this.para3 = para3;
+         this.para4 = para4;
          this.expected = expected;
     }
 
@@ -92,7 +86,7 @@ public class Tester {
     @Test
     public void test() {
 
-         Object actual = solution.removeNthFromEnd(para1, para2);
+         Object actual = solution.fourSumCount(para1, para2, para3, para4);
 
          assertThat(actual, is(equalTo(expected)));
 

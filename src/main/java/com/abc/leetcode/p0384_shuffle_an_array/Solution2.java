@@ -14,7 +14,7 @@ import com.ciaoshen.leetcode.util.*;
  *     }
  * =============================================
  */
-class Solution2 implements Solution {
+class Solution2 {
 
     
 

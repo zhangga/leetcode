@@ -1,7 +1,7 @@
 /**
- * Leetcode - p0283_move_zeroes
+ * Leetcode - p0454_4sum_ii
  */
-package com.abc.leetcode.p0283_move_zeroes;
+package com.abc.leetcode.p0454_4sum_ii;
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
@@ -16,8 +16,6 @@ import com.ciaoshen.leetcode.util.*;
  */
 class Solution2 implements Solution {
 
-    @Override
-    public int[] moveZeroes(int[] nums) {
-        return nums;
-    }
+    
+
 }

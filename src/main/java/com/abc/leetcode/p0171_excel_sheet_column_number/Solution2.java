@@ -1,7 +1,7 @@
 /**
- * Leetcode - p0138_copy_list_with_random_pointer
+ * Leetcode - p0171_excel_sheet_column_number
  */
-package com.abc.leetcode.p0138_copy_list_with_random_pointer;
+package com.abc.leetcode.p0171_excel_sheet_column_number;
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
@@ -17,8 +17,7 @@ import com.ciaoshen.leetcode.util.*;
 class Solution2 implements Solution {
 
     @Override
-    public Node copyRandomList(Node head) {
-        return null;
+    public int titleToNumber(String s) {
+        return 0;
     }
-
 }

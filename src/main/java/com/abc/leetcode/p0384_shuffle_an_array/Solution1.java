@@ -14,7 +14,7 @@ import com.ciaoshen.leetcode.util.*;
  *     }
  * =============================================
  */
-class Solution1 implements Solution {
+class Solution1 {
 
     private int[] array;
     private int[] original;

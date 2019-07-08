@@ -6,7 +6,7 @@ import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
 /** 
- * log instance is defined in Solution interface
+ * log instance is defined interface
  * this is how slf4j will work in this class:
  * =============================================
  *     if (log.isDebugEnabled()) {
@@ -14,9 +14,8 @@ import com.ciaoshen.leetcode.util.*;
  *     }
  * =============================================
  */
-class Solution1 implements Solution {
+class Solution1 {
 
-    @Override
     public ListNode removeNthFromEnd(ListNode head, int n) {
         // 没有元素
         if (head == null || n == 0) {
