@@ -1,7 +1,7 @@
 /**
- * Leetcode - p0454_4sum_ii
+ * Leetcode - p0162_find_peak_element
  */
-package com.abc.leetcode.p0454_4sum_ii;
+package com.abc.leetcode.p0162_find_peak_element;
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
@@ -14,10 +14,18 @@ import com.ciaoshen.leetcode.util.*;
  *     }
  * =============================================
  */
-class Solution2 implements Solution {
+class Solution1 implements Solution {
 
     @Override
-    public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
-        return 0;
+    public int findPeakElement(int[] nums) {
+        int i = 0, j = nums.length-1;
+        while (i < j) {
+            if (nums[i] > nums[j])
+                j--;
+            else
+                i++;
+        }
+        return i;
     }
+
 }
