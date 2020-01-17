@@ -1,7 +1,7 @@
 /**
- * Leetcode - p0206_reverse_linked_list
+ * Leetcode - p0100_same_tree
  */
-package com.abc.leetcode.p0206_reverse_linked_list;
+package com.abc.leetcode.p0100_same_tree;
 
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
@@ -34,8 +34,8 @@ public class Tester {
     @BeforeClass
     public static void setUpBeforeClass() throws Exception {
         /* uncomment to switch solutions */
-//        solution = new Solution1();
-         solution = new Solution2();
+        solution = new Solution1();
+        // solution = new Solution2();
     }
 
     /** Execute once after all of the test methods are executed in this class. */
@@ -45,27 +45,8 @@ public class Tester {
     /** Initialize test cases */
     @Parameters
     public static Collection<Object[]> testcases() {
-        ListNode head = new ListNode(1);
-        ListNode node1 = new ListNode(2);
-        ListNode node2 = new ListNode(3);
-        ListNode node3 = new ListNode(4);
-        ListNode node4 = new ListNode(5);
-        head.next = node1;
-        node1.next = node2;
-        node2.next = node3;
-        node3.next = node4;
-
-        ListNode expected = new ListNode(5);
-        ListNode expecte1 = new ListNode(4);
-        ListNode expecte2 = new ListNode(3);
-        ListNode expecte3 = new ListNode(2);
-        ListNode expecte4 = new ListNode(1);
-        expected.next = expecte1;
-        expecte1.next = expecte2;
-        expecte2.next = expecte3;
-        expecte3.next = expecte4;
         return Arrays.asList(new Object[][]{
-             {head, expected},     // test case 1 (init parameters below: {para1, para2, expected})
+            // {},     // test case 1 (init parameters below: {para1, para2, expected})
             // {},     // test case 2 (init parameters below: {para1, para2, expected})
             // {}      // test case 3 (init parameters below: {para1, para2, expected})
         });
@@ -73,20 +54,20 @@ public class Tester {
 
     /**=========================== for each test case ============================== */
 
-    /**
-     * Parameters for each test (initialized in testcases() method)
+    /** 
+     * Parameters for each test (initialized in testcases() method) 
      * You can change the type of parameters
      */
-     private ListNode para1;                       // parameter 1
+    // private Object para1;                       // parameter 1
     // private Object para2;                       // parameter 2
-     private ListNode expected;                    // parameter 3 (expected answer)
+    // private Object expected;                    // parameter 3 (expected answer)
 
     /** This constructor must be provided to run parameterized test. */
-    public Tester(ListNode para1, ListNode expected) {
+    public Tester(Object para1, Object para2, Object expected) {
            // initialize test parameters
-         this.para1 = para1;
+    //     this.para1 = para1; 
     //     this.para2 = para2;
-         this.expected = expected;
+    //     this.expected = expected;
     }
 
     /** Execute before each test method in this class is executed. */
@@ -96,14 +77,14 @@ public class Tester {
     /** Executed as a test case. */
     @Test
     public void test() {
-
-         Object actual = solution.reverseList(para1);
-
-         assertThat(actual, is(equalTo(expected)));
-
-         if (LOGGER.isDebugEnabled()) {
-             LOGGER.debug("your-method() pass unit test!");
-         }
+        //
+        // Object actual = solution.your-method(para1, para2);
+        //
+        // assertThat(actual, is(equalTo(expected)));
+        //
+        // if (LOGGER.isDebugEnabled()) {
+        //     LOGGER.debug("your-method() pass unit test!");
+        // }
     }
 
     /** Execute after each test method in this class is executed. */

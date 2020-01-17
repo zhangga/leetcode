@@ -1,7 +1,7 @@
 /**
- * Leetcode - p0206_reverse_linked_list
+ * Leetcode - p0010_regular_expression
  */
-package com.abc.leetcode.p0206_reverse_linked_list;
+package com.abc.leetcode.p0010_regular_expression;
 import java.util.*;
 import com.ciaoshen.leetcode.util.*;
 
@@ -17,14 +17,8 @@ import com.ciaoshen.leetcode.util.*;
 class Solution2 implements Solution {
 
     @Override
-    public ListNode reverseList(ListNode head) {
-        if (head == null || head.next == null)
-            return head;
-        ListNode node = reverseList(head.next);
-        ListNode next = head.next;
-        next.next = head;
-        head.next = null;
-        return node;
+    public boolean isMatch(String s, String p) {
+        return false;
     }
 
 }

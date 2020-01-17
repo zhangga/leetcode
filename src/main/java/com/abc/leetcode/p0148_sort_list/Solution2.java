@@ -7,7 +7,7 @@ import com.ciaoshen.leetcode.util.*;
 
 /**
  * @see Solution1 其实并不是0(1) space，因为使用了递归的归并排序，需要Log(N)的递归堆栈调用。
- * 这是正在的O(1) space的解，其实就是把递归变为自底向上的归并排序，非常类似动态规划的思想，
+ * 这是真正的O(1) space的解，其实就是把递归变为自底向上的归并排序，非常类似动态规划的思想，
  * 自顶向下是递归，自底向上也就是动态规划。
  */
 class Solution2 implements Solution {
