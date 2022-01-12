@@ -16,6 +16,14 @@ DebugMain.java文件进行本地调试。
 
 
 
+# 🔑 JetBrains OS licenses
+
+`leetcode-helper` had been being developed with `IDEA` IDE under the **free JetBrains Open Source license(s)** granted by JetBrains s.r.o., hence I would like to express my thanks here.
+
+[![img](https://raw.githubusercontent.com/panjf2000/illustrations/master/jetbrains/jetbrains-variant-4.png)](https://www.jetbrains.com/?from=zhangga)
+
+# 
+
 
 
 > leetcode-helper 文件夹
